@@ -27,4 +27,4 @@ ft_databrowser(plot_cfg, raw_ERF);
 saveas(gcf,['figure' filesep MEG_file{MEG_num} '_edge_artifacts_check.png']);
 close all;
 
-% save([MEG_file{MEG_num} '.mat']);
+save([MEG_file{MEG_num} '.mat']);

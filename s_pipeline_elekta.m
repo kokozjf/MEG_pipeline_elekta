@@ -2,7 +2,7 @@ clear all;
 MEG_dataset = importdata('D:\MEG\pipeline\MEG_pipeline_elekta\\MEG_path.txt');
 MEG_file = importdata('D:\MEG\pipeline\MEG_pipeline_elekta\\MEG_file.txt');
 MRI_dataset = importdata('D:\MEG\pipeline\MEG_pipeline_elekta\\MRI_path.txt');
-trigger_value = [61443 61450];
+trigger_value = [61443 61450 61450];
 addpath('D:\MEG\pipeline\MEG_pipeline_elekta\\');
 
 for MEG_num = 1:length(MEG_dataset)

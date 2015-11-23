@@ -11,4 +11,4 @@ cfg.covariancewindow = 'all';
 
 ERF = ft_timelockanalysis(cfg, redefine_data);
 
-% save([MEG_file{MEG_num} '.mat'], ERF, '-append');
+save([MEG_file{MEG_num} '.mat'], 'ERF', '-append');
