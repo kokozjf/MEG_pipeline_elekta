@@ -1,12 +1,13 @@
 %% preprocessing cfg
 % define trials
+
 cfg = [];
-cfg.dataset = MEG_dataset{MEG_num}; 
-cfg.trialdef.eventtype = 'frontpanel trigger';
+cfg.dataset = MEG_file{MEG_num}; 
+cfg.trialdef.eventtype = 'STI101';
 cfg.trialdef.eventvalue = trigger_value(MEG_num);
 cfg.trialdef.prestim    = 1;
 cfg.trialdef.poststim   = 2; 
-cfg.channel = 'meg';
+cfg.channel = 'megmag';
 cfg = ft_definetrial(cfg);
 raw_data = ft_preprocessing(cfg);
 
@@ -23,8 +24,7 @@ plot_cfg = [];
 plot_cfg.viewmode = 'butterfly';
 plot_cfg.colorgroups = 'allblack';
 ft_databrowser(plot_cfg, raw_ERF);
-saveas(gcf,'figure/edge_artifacts_check.png');
+saveas(gcf,['figure' filesep MEG_file{MEG_num} '_edge_artifacts_check.png']);
 close all;
 
-
-save('results.mat');
+% save([MEG_file{MEG_num} '.mat']);
