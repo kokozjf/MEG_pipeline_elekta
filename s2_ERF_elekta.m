@@ -7,7 +7,7 @@ redefine_data = ft_redefinetrial(cfg, filting_data);
 %% ERF for further ananyzing
 cfg = [];
 % cfg.channel          = 'megmag';
-cfg.channel          = 'meg';
+cfg.channel          = 'MEG';
 cfg.covariance       = 'yes';
 cfg.covariancewindow = 'all';
 

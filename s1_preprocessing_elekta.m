@@ -14,17 +14,19 @@ raw_data = ft_preprocessing(cfg);
 
 % bandpass filter
 cfg = [];
-cfg.preproc.demean = 'yes';
+cfg.demean = 'yes';
 cfg.bpfilter = 'yes';
 cfg.bpfreq = [1 35]; 
 filting_data = ft_preprocessing(cfg,raw_data);
+
+cfg = [];
 raw_ERF = ft_timelockanalysis(cfg, filting_data);
 
 % check edge artifacts
-plot_cfg = [];
-plot_cfg.viewmode = 'butterfly';
-plot_cfg.colorgroups = 'allblack';
-ft_databrowser(plot_cfg, raw_ERF);
+cfg = [];
+cfg.viewmode = 'butterfly';
+cfg.colorgroups = 'allblack';
+ft_databrowser(cfg, raw_ERF);
 saveas(gcf,['figure' filesep MEG_file{MEG_num} '_edge_artifacts_check.png']);
 close all;
 

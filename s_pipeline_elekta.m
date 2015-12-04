@@ -7,7 +7,7 @@ addpath('D:\MEG\pipeline\MEG_pipeline_elekta\\');
 
 for MEG_num = 1:length(MEG_dataset)
     cd(MEG_dataset{MEG_num});
-%     
+    
 %     header = ft_read_header(MEG_dataset{MEG_num});
 %     header.orig.infods(5)
     
