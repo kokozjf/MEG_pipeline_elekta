@@ -1,12 +1,17 @@
 clear all;
-MEG_dataset = importdata('D:\MEG\pipeline\MEG_pipeline_elekta\\MEG_path.txt');
-MEG_file = importdata('D:\MEG\pipeline\MEG_pipeline_elekta\\MEG_file.txt');
-MRI_dataset = importdata('D:\MEG\pipeline\MEG_pipeline_elekta\\MRI_path.txt');
-trigger_value = [61443 61450 61450];
-addpath('D:\MEG\pipeline\MEG_pipeline_elekta\\');
+% MEG_dataset = importdata('D:\MEG\pipeline\MEG_pipeline_elekta\\MEG_path.txt');
+% MEG_file = importdata('D:\MEG\pipeline\MEG_pipeline_elekta\\MEG_file.txt');
+% MRI_dataset = importdata('D:\MEG\pipeline\MEG_pipeline_elekta\\MRI_path.txt');
+MEG_dataset  = '/media/jianfeng/data/MEG/pku_data/data/151116/';
+MEG_file = 'vef_gabor_counting_HL_sss.fif';
+MRI_dataset  = '/media/jianfeng/data/MEG/pku_data/data/003_Sag_3D_T1BRAVO';
 
-for MEG_num = 1:length(MEG_dataset)
-    cd(MEG_dataset{MEG_num});
+trigger_value =61450;
+
+addpath('/media/jianfeng/data/MEG/pipeline/MEG_pipeline_elekta');
+
+% for MEG_num = 1:length(MEG_dataset)
+    cd(MEG_dataset);
     
 %     header = ft_read_header(MEG_dataset{MEG_num});
 %     header.orig.infods(5)

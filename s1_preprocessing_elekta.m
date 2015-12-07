@@ -2,9 +2,9 @@
 
 % define trials
 cfg = [];
-cfg.dataset = MEG_file{MEG_num}; 
+cfg.dataset = MEG_file; 
 cfg.trialdef.eventtype = 'STI101';
-cfg.trialdef.eventvalue = trigger_value(MEG_num);
+cfg.trialdef.eventvalue = trigger_value;
 cfg.trialdef.prestim    = 1;
 cfg.trialdef.poststim   = 2; 
 cfg.channel = 'meg';
@@ -27,7 +27,7 @@ cfg = [];
 cfg.viewmode = 'butterfly';
 cfg.colorgroups = 'allblack';
 ft_databrowser(cfg, raw_ERF);
-saveas(gcf,['figure' filesep MEG_file{MEG_num} '_edge_artifacts_check.png']);
+saveas(gcf,['figure' filesep MEG_file '_edge_artifacts_check.png']);
 close all;
 
-% save([MEG_file{MEG_num} '.mat']);
+% save([MEG_file '.mat']);
