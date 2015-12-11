@@ -25,4 +25,4 @@ addpath('/media/jianfeng/data/MEG/pipeline/MEG_pipeline_elekta');
     s3_3_topoplotER_elekta;
 %     s4_forward_model_elekta;
 %     s5_inverse_model_elekta;
-end
+% end
